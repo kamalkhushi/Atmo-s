@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html >
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Atmo's</title>
+<link rel="shortcut icon" href="titleimg.png" type="image/x-icon"/>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" >
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
+</head>
+<body>
+<div class="signup"> 
+    <form > 
+        <h2>ATMOS</h2>
+        <div >
+            <input class="mytext" classtype="email" id="rcorners1" placeholder="Username" required="required">
+        </div>
+        <div class="wrapper">
+            <input class="mytext" type="password" id="rcorners2"  placeholder="Password" required="required">
+            <span class="eye">
+                <i class="fa fa-eye" id="eye1" onclick="toggle()"></i>
+                <i class="fa fa-eye-slash" id="eye2" onclick="toggle()"></i>               
+            </span>               
+        </div>        
+        <div id="ParentDivBtn1">
+            <button id="firstDivBtn1"><i class="fa fa-google"></i></button>
+            <button id="secondDivBtn1"><i class="fa fa-facebook-square"></i></button>              
+        </div>
+        <div id="ParentDivBtn2">
+            <button id="firstDivBtn2" class="button button1">Login In</button>
+            <button id="secondDivBtn2" class="button button2">Sign Up</button>          
+        </div>
+    </form>    
+</div>
+<script>
+    var state= false;                         
+        function toggle()
+        {             
+            var x= document.getElementById("rcorners2");
+            var y= document.getElementById("eye1"); 
+            var z= document.getElementById("eye2");               
+            if(state)
+            {                                
+            document.getElementById("rcorners2").setAttribute("type","password");
+            document.getElementById("eye2");                            
+            state = false;
+            y.style.display="none";
+            z.style.display="block";
+            z.style.display="unset"            
+            }
+            else
+            {                         
+            document.getElementById("rcorners2").setAttribute("type","text");
+            document.getElementById("eye1");
+            state = true;
+            y.style.display="block";
+            z.style.display="none";
+            y.style.display="unset"
+            }
+        }
+</script>  
+</body>
+</html>
